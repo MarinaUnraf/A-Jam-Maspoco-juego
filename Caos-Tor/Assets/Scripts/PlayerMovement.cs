@@ -13,6 +13,14 @@ public class PlayerMovement : MonoBehaviour
     public bool isMoving = false;
     private Vector3 targetPosition;
 
+    private Animator animator;
+    private float lastPositionX;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -25,6 +33,21 @@ public class PlayerMovement : MonoBehaviour
         if (isMoving)
         {
             MoveTo(targetPosition);
+            animator.SetBool("Walk", true);
+        }
+        else if(!isMoving)
+        {
+            animator.SetBool("Walk", false);
+            lastPositionX = transform.position.x;
+        }
+        
+        if(transform.position.x > lastPositionX)
+        {
+            Debug.Log("camina hacia la derecha");
+        }
+        else if(transform.position.x < lastPositionX)
+        {
+            Debug.Log("camina hacia la izquierda");
         }
     }
 

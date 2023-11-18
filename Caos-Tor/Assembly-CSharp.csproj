@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\InteractableElement.cs" />
     <Compile Include="Assets\Scripts\InteractZone.cs" />
+    <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
