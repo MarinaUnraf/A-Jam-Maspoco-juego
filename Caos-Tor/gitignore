@@ -2,7 +2,7 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/Caos-Tor/[Ll]ibrary/
+**/[Ll]ibrary/
 /Caos-Tor/[Tt]emp/
 /Caos-Tor/[Oo]bj/
 /Caos-Tor/[Bb]uild/
