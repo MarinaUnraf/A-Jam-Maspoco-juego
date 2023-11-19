@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 739b409f99e13d64fb8e7feff1fdc8d6
+guid: d54152800166b7e45a88eebc9037b2e8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: castor-spritesheet-walk-idle 0
+      name: castor-spritesheet-2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,20 +137,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52743dcf28bd83c41873cde288373c69
-      internalID: 923836486
+      spriteID: bbe36f3ba72ae134eaf2dab4b0400207
+      internalID: -1442564440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: castor-spritesheet-walk-idle 1
+      name: castor-spritesheet-2_1
       rect:
         serializedVersion: 2
         x: 512
@@ -158,41 +158,20 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f14f0f9f8396624188a8b88dd4267d8
-      internalID: -1660067113
+      spriteID: 023d6a1b16d1bda4e8e1ac663141578d
+      internalID: -1695687564
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: castor-spritesheet-walk-idle 2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37251bd75ce0dcf45b86041c85ae8b30
-      internalID: -441383029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: castor-spritesheet-walk-idle 3
+      name: castor-spritesheet-2_2
       rect:
         serializedVersion: 2
         x: 512
@@ -200,14 +179,14 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d492eae504b9724a9f35666c2c4e6e1
-      internalID: -38290154
+      spriteID: 32c6619df64bd1c4da9887a45c3fb4cf
+      internalID: -471452892
       vertices: []
       indices: 
       edges: []
@@ -223,10 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      castor-spritesheet-walk-idle 0: 923836486
-      castor-spritesheet-walk-idle 3: -38290154
-      castor-spritesheet-walk-idle 2: -441383029
-      castor-spritesheet-walk-idle 1: -1660067113
+      castor-spritesheet-2_2: -471452892
+      castor-spritesheet-2_1: -1695687564
+      castor-spritesheet-2_0: -1442564440
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
