@@ -15,6 +15,7 @@ public class EnemyBehaviour : MonoBehaviour
     public LayerMask playerLayer;
     public LayerMask obstaclesLayer;
 
+    [SerializeField] private GameObject canvasLose;
 
     void Update()
     {
@@ -71,8 +72,14 @@ public class EnemyBehaviour : MonoBehaviour
         // Verifica si el jugador está dentro del círculo de detección y no hay obstáculos en el camino
         if (Vector2.Distance(transform.position, playerPosition) <= detectionRadius && (hit.collider == null || hit.collider.CompareTag("Player")))
         {
-            Debug.Log("Player detected!");
-            // Puedes realizar acciones específicas cuando se detecta al jugador
+            speed = 0;
+            player.gameObject.SetActive(false);
+            Invoke("ShowCanvas", .6f);
         }
+    }
+
+    private void ShowCanvas()
+    {
+        canvasLose.SetActive(true);
     }
 }
