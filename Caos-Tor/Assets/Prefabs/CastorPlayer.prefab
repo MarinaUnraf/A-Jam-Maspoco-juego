@@ -144,7 +144,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6410826958574085423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a17c9bdfebac0645ba2cefd30743bad, type: 3}
+  m_Script: {fileID: 11500000, guid: 36550ec0802dd759c8cb9e63874b01c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
@@ -152,7 +152,7 @@ MonoBehaviour:
   raycastDistance: 0.5
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   isMoving: 0
 --- !u!95 &6410826958574085417
 Animator:
