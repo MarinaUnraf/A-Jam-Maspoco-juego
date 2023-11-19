@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class InteractZone : MonoBehaviour
 {
-    /*public PlayerMovement playerMovement;
+    [SerializeField] private EnemyBehaviour m_EnemyBehaviour;
+    [SerializeField] private GameObject canvasLose;
 
-
-    private void Start()
-    {
-        playerMovement = GetComponent<PlayerMovement>();
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision != null)
+        if(collision.gameObject.CompareTag("Player"))
         {
-            playerMovement.enabled = false;
+            Debug.Log("jugador detectado!");
+            m_EnemyBehaviour.enabled = false;
+            collision.gameObject.SetActive(false);
+            Invoke("ShowCanvas", .6f);
         }
-    }*/
+    }
+
+    private void ShowCanvas()
+    {
+        canvasLose.SetActive(true);
+    }
 }

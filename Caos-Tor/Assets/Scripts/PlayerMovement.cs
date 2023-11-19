@@ -41,13 +41,15 @@ public class PlayerMovement : MonoBehaviour
             lastPositionX = transform.position.x;
         }
         
+        
+        
         if(transform.position.x > lastPositionX)
         {
-            Debug.Log("camina hacia la derecha");
+            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
         else if(transform.position.x < lastPositionX)
         {
-            Debug.Log("camina hacia la izquierda");
+            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
     }
 

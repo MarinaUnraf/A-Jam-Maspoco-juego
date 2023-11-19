@@ -11,13 +11,11 @@ public class EnemyBehaviour : MonoBehaviour
     private int currentWaypoint;
     private bool isWaiting;
 
-    
-    void Start()
-    {
-        
-    }
+    public float detectionRadius = 5f;
+    public LayerMask playerLayer;
+    public LayerMask obstaclesLayer;
 
-    
+
     void Update()
     {
         if(transform.position != walkingPoints[currentWaypoint].position)
@@ -28,6 +26,8 @@ public class EnemyBehaviour : MonoBehaviour
         {
             StartCoroutine(Wait());
         }
+
+        DetectPlayer();
     }
 
     IEnumerator Wait()
@@ -41,5 +41,38 @@ public class EnemyBehaviour : MonoBehaviour
             currentWaypoint = 0;
         }
         isWaiting = false;
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        // Dibuja el círculo de detección en el escenario cuando el objeto está seleccionado
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    }
+
+    void DetectPlayer()
+    {
+        // Obtiene la posición del jugador
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player == null)
+        {
+            return;
+        }
+
+        Vector2 playerPosition = player.transform.position;
+
+        // Realiza un Raycast en la dirección del jugador
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, playerPosition - (Vector2)transform.position, detectionRadius, obstaclesLayer);
+
+        // Visualiza el Raycast
+        Debug.DrawRay(transform.position, (playerPosition - (Vector2)transform.position).normalized * detectionRadius, Color.blue);
+
+        // Verifica si el jugador está dentro del círculo de detección y no hay obstáculos en el camino
+        if (Vector2.Distance(transform.position, playerPosition) <= detectionRadius && (hit.collider == null || hit.collider.CompareTag("Player")))
+        {
+            Debug.Log("Player detected!");
+            // Puedes realizar acciones específicas cuando se detecta al jugador
+        }
     }
 }
