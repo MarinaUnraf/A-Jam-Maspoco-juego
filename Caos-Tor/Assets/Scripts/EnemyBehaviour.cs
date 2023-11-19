@@ -73,7 +73,9 @@ public class EnemyBehaviour : MonoBehaviour
         if (Vector2.Distance(transform.position, playerPosition) <= detectionRadius && (hit.collider == null || hit.collider.CompareTag("Player")))
         {
             speed = 0;
-            player.gameObject.SetActive(false);
+            player.GetComponent<PlayerMovement>().maxSpeed = 0;
+            player.GetComponent<Animator>().SetTrigger("Death");
+            player.GetComponent<PlayerMovement>().enabled = false;
             Invoke("ShowCanvas", .6f);
         }
     }
