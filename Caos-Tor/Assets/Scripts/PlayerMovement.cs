@@ -57,17 +57,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 direction = (target - transform.position).normalized;
 
-        // Realiza un Raycast en la dirección de movimiento
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, raycastDistance, obstacleLayer);
 
-        // Si el Raycast golpea un objeto, detiene el movimiento
         if (hit.collider != null && hit.collider.tag == "Obstacle")
         {
             isMoving = false;
             return;
         }
 
-        // Visualiza el Raycast
         Debug.DrawRay(transform.position, direction * raycastDistance, Color.red);
 
         float currentSpeed = Mathf.Min(maxSpeed, Vector3.Distance(transform.position, target) * smoothing);

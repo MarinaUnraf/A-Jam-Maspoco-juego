@@ -10,6 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private int currentWaypoint;
     private bool isWaiting;
+    private Animator animator;
 
     public float detectionRadius = 5f;
     public LayerMask playerLayer;
@@ -17,8 +18,15 @@ public class EnemyBehaviour : MonoBehaviour
 
     [SerializeField] private GameObject canvasLose;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
+        animator.SetBool("Walking", !isWaiting);
+
         if(transform.position != walkingPoints[currentWaypoint].position)
         {
             transform.position = Vector2.MoveTowards(transform.position, walkingPoints[currentWaypoint].position, speed * Time.deltaTime);
@@ -53,7 +61,6 @@ public class EnemyBehaviour : MonoBehaviour
 
     void DetectPlayer()
     {
-        // Obtiene la posición del jugador
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         if (player == null)
@@ -63,13 +70,10 @@ public class EnemyBehaviour : MonoBehaviour
 
         Vector2 playerPosition = player.transform.position;
 
-        // Realiza un Raycast en la dirección del jugador
         RaycastHit2D hit = Physics2D.Raycast(transform.position, playerPosition - (Vector2)transform.position, detectionRadius, obstaclesLayer);
 
-        // Visualiza el Raycast
         Debug.DrawRay(transform.position, (playerPosition - (Vector2)transform.position).normalized * detectionRadius, Color.blue);
 
-        // Verifica si el jugador está dentro del círculo de detección y no hay obstáculos en el camino
         if (Vector2.Distance(transform.position, playerPosition) <= detectionRadius && (hit.collider == null || hit.collider.CompareTag("Player")))
         {
             speed = 0;
