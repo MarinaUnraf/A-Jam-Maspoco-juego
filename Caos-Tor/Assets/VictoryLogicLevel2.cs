@@ -13,6 +13,10 @@ public class VictoryLogicLevel2 : MonoBehaviour
     private EnemyBehaviour enemyBehaviour;
 
     private PlayerMovement playerMovement;
+    public GameObject musicVictory;
+
+    public GameObject music;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +26,7 @@ public class VictoryLogicLevel2 : MonoBehaviour
 
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerMovement.enabled = true;
-
+        musicVictory.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,13 +39,14 @@ public class VictoryLogicLevel2 : MonoBehaviour
             StartCoroutine(ShowCanvas());
             enemyBehaviour.speed = 0;
             playerMovement.enabled = false;
-
         }
     }
 
     IEnumerator ShowCanvas()
     {
         yield return new WaitForSeconds(1.5f);
+        music.SetActive(false);
         canvasVictory.SetActive(true);
+        musicVictory.SetActive(true);
     }
 }

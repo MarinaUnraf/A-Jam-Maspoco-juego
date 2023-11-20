@@ -18,6 +18,9 @@ public class EnemyBehaviour : MonoBehaviour
 
     [SerializeField] private GameObject canvasLose;
 
+    public GameObject music;
+    public GameObject musicLose;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -87,5 +90,7 @@ public class EnemyBehaviour : MonoBehaviour
     private void ShowCanvas()
     {
         canvasLose.SetActive(true);
+        musicLose.SetActive(true);
+        music.SetActive(false);
     }
 }

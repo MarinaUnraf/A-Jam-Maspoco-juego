@@ -11,6 +11,9 @@ public class VicoryLogic : MonoBehaviour
     private EnemyBehaviour enemyBehaviour;
 
     private PlayerMovement playerMovement;
+
+    public GameObject music;
+    public GameObject musicVictory;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +40,7 @@ public class VicoryLogic : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         canvasVictory.SetActive(true);
+        musicVictory.SetActive(true);
+        music.SetActive(false );
     }
 }
