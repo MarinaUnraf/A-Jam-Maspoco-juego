@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\InteractZone.cs" />
+    <Compile Include="Assets\Scripts\RepresaLogic.cs" />
     <Compile Include="Assets\Scripts\EnemyAttacks.cs" />
     <Compile Include="Assets\Scripts\InventoryObject.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
@@ -64,7 +65,6 @@
     <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\InteractableElement.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\RepresaLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

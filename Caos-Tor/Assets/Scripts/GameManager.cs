@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private int ramasCount = 0;
+    public int ramasCount = 0;
 
     public TextMeshProUGUI numberText;
 
@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour
     public void IncreaseRamasCount()
     {
         ramasCount++;
-        Debug.Log("Ramas recolectadas: " + ramasCount);
 
         numberText.text = ramasCount.ToString();
     }
