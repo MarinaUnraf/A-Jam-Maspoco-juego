@@ -1859,6 +1859,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 385762247}
     - target: {fileID: 8817765422481415560, guid: 702a769c37e9e0fcabea5815cfbc53cb, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 246826416}
+    - target: {fileID: 8817765422481415560, guid: 702a769c37e9e0fcabea5815cfbc53cb, type: 3}
       propertyPath: rioCorriendo
       value: 
       objectReference: {fileID: 961723414}
@@ -2236,6 +2240,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8817765422481415560, guid: 702a769c37e9e0fcabea5815cfbc53cb, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 246826416}
     - target: {fileID: 8817765422481415560, guid: 702a769c37e9e0fcabea5815cfbc53cb, type: 3}
       propertyPath: rioCorriendo
       value: 
@@ -4024,6 +4032,8 @@ MonoBehaviour:
   transitionTime: 0.3
   riverToDisable: {fileID: 2038711046}
   riverToEnable: {fileID: 1577039631}
+  audioSource: {fileID: 246826416}
+  audioClip: {fileID: 8300000, guid: bd25258c876ec2845b7d3e6e03857d23, type: 3}
 --- !u!1 &1344832563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9044,6 +9054,10 @@ PrefabInstance:
       propertyPath: otherRiver
       value: 
       objectReference: {fileID: 961723414}
+    - target: {fileID: 8817765422481415560, guid: 702a769c37e9e0fcabea5815cfbc53cb, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 246826416}
     - target: {fileID: 8817765422481415560, guid: 702a769c37e9e0fcabea5815cfbc53cb, type: 3}
       propertyPath: rioCorriendo
       value: 

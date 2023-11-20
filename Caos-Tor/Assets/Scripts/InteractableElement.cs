@@ -12,6 +12,9 @@ public class InteractableElement : MonoBehaviour
     public GameObject rama;
     public GameObject rioCorriendo;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
 
     private void Start()
     {
@@ -25,7 +28,9 @@ public class InteractableElement : MonoBehaviour
         {
             rioCorriendo.SetActive(false);
 
-        }    
+        }
+
+        audioSource.clip = audioClip;
     }
 
     void Update()
@@ -36,6 +41,7 @@ public class InteractableElement : MonoBehaviour
             rightClickCount++;
 
             player.GetComponent<Animator>().SetTrigger("Chop");
+            audioSource.PlayOneShot(audioClip);
 
             if (rightClickCount >= rightClicksToDisappear)
             {

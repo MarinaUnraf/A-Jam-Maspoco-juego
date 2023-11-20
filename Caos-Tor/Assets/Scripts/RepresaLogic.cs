@@ -22,12 +22,17 @@ public class RepresaLogic : MonoBehaviour
     public GameObject riverToDisable;
     public GameObject riverToEnable;
 
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         numberText.text = numberOfTreesNedeed.ToString();
         riverToEnable.SetActive(false);
+
+        audioSource.clip = audioClip;
     }
 
     private void Update()
@@ -38,6 +43,8 @@ public class RepresaLogic : MonoBehaviour
             numberText.enabled = false;
             riverToDisable.SetActive(false);
             riverToEnable.SetActive(true);
+
+            audioSource.PlayOneShot(audioClip, .2f);
         }
     }
 

@@ -336,6 +336,8 @@ MonoBehaviour:
   player: {fileID: 0}
   rama: {fileID: 4310098753191389596}
   rioCorriendo: {fileID: 0}
+  audioSource: {fileID: 674248830681905018, guid: 7e49f219bd5fc0144ba788eebab178f0, type: 3}
+  audioClip: {fileID: 8300000, guid: 0e0f75ed1c2aa7046b6d03d1211fc972, type: 3}
 --- !u!61 &7931798531812147307
 BoxCollider2D:
   m_ObjectHideFlags: 0
