@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Ramas
+  - Interactuable
   layers:
   - Default
   - TransparentFX

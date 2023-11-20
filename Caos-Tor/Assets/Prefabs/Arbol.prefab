@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 7931798531812147307}
   m_Layer: 0
   m_Name: TREE
-  m_TagString: Obstacle
+  m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,6 +335,7 @@ MonoBehaviour:
   rightClicksToDisappear: 3
   player: {fileID: 0}
   rama: {fileID: 4310098753191389596}
+  rioCorriendo: {fileID: 0}
 --- !u!61 &7931798531812147307
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -422,3 +423,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c729f6dd5e1c3a34c84dfb74c20353d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorHax: {fileID: 2800000, guid: a8c54de1c52d63fa9ab5a725c377e199, type: 3}
+  cursorNormal: {fileID: 2800000, guid: 144822162c71d1324bf412ce87d8ae02, type: 3}
