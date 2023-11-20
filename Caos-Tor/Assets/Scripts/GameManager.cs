@@ -24,10 +24,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        numberText.text = ramasCount.ToString();
+        
+    }
+
     public void IncreaseRamasCount()
     {
         ramasCount++;
 
-        numberText.text = ramasCount.ToString();
     }
 }

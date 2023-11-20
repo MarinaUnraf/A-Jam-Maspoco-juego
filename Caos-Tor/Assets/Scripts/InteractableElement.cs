@@ -10,11 +10,22 @@ public class InteractableElement : MonoBehaviour
     public GameObject player;
 
     public GameObject rama;
+    public GameObject rioCorriendo;
+
 
     private void Start()
     {
         rama.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
+        if (rioCorriendo == null)
+        {
+            return;
+        }
+        else
+        {
+            rioCorriendo.SetActive(false);
+
+        }    
     }
 
     void Update()
@@ -28,12 +39,19 @@ public class InteractableElement : MonoBehaviour
 
             if (rightClickCount >= rightClicksToDisappear)
             {
-
                 gameObject.SetActive(false);
                 rama.SetActive(true);
-
-
+                if (rioCorriendo == null)
+                {
+                    return;
+                }
+                else
+                {
+                    rioCorriendo.SetActive(true);
+                }
             }
         }
+
+        
     }
 }

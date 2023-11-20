@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Tilemaps;
 
 public class RepresaLogic : MonoBehaviour
 {
@@ -18,22 +19,26 @@ public class RepresaLogic : MonoBehaviour
     // Tiempo en segundos para la transición de opacidad
     public float transitionTime = 1.0f;
 
+    public GameObject riverToDisable;
+    public GameObject riverToEnable;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         numberText.text = numberOfTreesNedeed.ToString();
+        riverToEnable.SetActive(false);
     }
 
     private void Update()
     {
-        if(numberOfTreesNedeed == 0)
+        if (numberOfTreesNedeed == 0)
         {
             ChangeOpacitySmooth();
             numberText.enabled = false;
+            riverToDisable.SetActive(false);
+            riverToEnable.SetActive(true);
         }
-
-        GameManager.instance.ramasCount.ToString();
     }
 
     void OnMouseOver()
@@ -64,7 +69,6 @@ public class RepresaLogic : MonoBehaviour
         GameManager.instance.ramasCount -= 1;
         numberOfTreesNedeed--;
         numberText.text = numberOfTreesNedeed.ToString();
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
