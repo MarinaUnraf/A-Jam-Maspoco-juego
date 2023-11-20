@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class InventoryObject : MonoBehaviour
 {
+    private bool playerInTheArea = false;
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(1)) // Clic derecho
+        if (Input.GetMouseButtonDown(1) && playerInTheArea)
         {
             CollectRama();
         }
@@ -17,5 +18,21 @@ public class InventoryObject : MonoBehaviour
         Destroy(gameObject);
 
         GameManager.instance.IncreaseRamasCount();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerInTheArea = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerInTheArea = false;
+        }
     }
 }

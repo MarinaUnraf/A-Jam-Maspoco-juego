@@ -26,7 +26,6 @@ public class InteractableElement : MonoBehaviour
 
             player.GetComponent<Animator>().SetTrigger("Chop");
 
-
             if (rightClickCount >= rightClicksToDisappear)
             {
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3147302079383578376}
-  - component: {fileID: 507254699144583596}
+  - component: {fileID: 4070353964433682087}
   m_Layer: 6
   m_Name: AreaCollider
   m_TagString: Obstacle
@@ -32,8 +32,8 @@ Transform:
   m_Father: {fileID: 3964966013750119904}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &507254699144583596
-CircleCollider2D:
+--- !u!61 &4070353964433682087
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -45,9 +45,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.018877953, y: -1.4702438}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Size: {x: 0.51152605, y: 1.0044587}
+  m_EdgeRadius: 0
 --- !u!1 &3380219544668538315
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,6 +103,7 @@ GameObject:
   - component: {fileID: 5468178142936504106}
   - component: {fileID: 3758734516358725539}
   - component: {fileID: 7292296535807286519}
+  - component: {fileID: 108434771605365910}
   m_Layer: 0
   m_Name: Rama
   m_TagString: Ramas
@@ -108,8 +119,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4310098753191389596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.35, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.8, z: 1}
+  m_LocalPosition: {x: -1.21, y: -1.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3380219544668538314}
@@ -155,8 +166,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1230278685, guid: de3be9f2a5534a542b443ea28b112e32, type: 3}
+  m_SortingOrder: 15
+  m_Sprite: {fileID: 131075322, guid: 6f798d417da310cb8a25c78e7b042923, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,7 +195,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.68604654, y: 0.35465115}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -205,8 +216,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1be6328c1fcfd24a85d1b4c0239bdf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightClicksToDisappear: 1
-  player: {fileID: 0}
+--- !u!58 &108434771605365910
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4310098753191389596}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000047683716, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &5450825980861843946
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +243,7 @@ GameObject:
   - component: {fileID: 3964966013750119904}
   - component: {fileID: 3355797034505660005}
   - component: {fileID: 8817765422481415560}
-  - component: {fileID: 2312844229113507814}
+  - component: {fileID: 7931798531812147307}
   m_Layer: 0
   m_Name: TREE
   m_TagString: Obstacle
@@ -283,9 +308,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5188679, g: 0.29325044, b: 0.056292284, a: 1}
+  m_SortingOrder: 20
+  m_Sprite: {fileID: 1392411953, guid: 6f798d417da310cb8a25c78e7b042923, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -310,8 +335,8 @@ MonoBehaviour:
   rightClicksToDisappear: 3
   player: {fileID: 0}
   rama: {fileID: 4310098753191389596}
---- !u!58 &2312844229113507814
-CircleCollider2D:
+--- !u!61 &7931798531812147307
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -323,9 +348,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.009438813, y: -1.4670721}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.9418604, y: 4.0697675}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 0.67704403, y: 1.1356227}
+  m_EdgeRadius: 0
 --- !u!1 &8079203336246386878
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8079203336246386878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -374,7 +409,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 1
 --- !u!114 &1187450558361090619
 MonoBehaviour:
   m_ObjectHideFlags: 0
