@@ -17,13 +17,19 @@ public class RiverController : MonoBehaviour
     public Vector3Int startCellPosition = new Vector3Int(0, 0, 0);
     public bool moveVerticallyFirst = true;
 
+    public AudioSource sfxFuente;
+    public AudioClip riverSfx;
+
     private void Start()
     {
         StartCoroutine(StartRiverFlow());
+        sfxFuente.clip = riverSfx;
     }
 
     private IEnumerator StartRiverFlow()
     {
+        sfxFuente.PlayOneShot(riverSfx);
+
         int flowDirectionX = 1;
         int flowDirectionY = 0;
 
